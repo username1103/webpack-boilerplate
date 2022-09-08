@@ -26,5 +26,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'public', 'app.html') })],
+  plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'public', 'app.html'), inject: false })],
 };
