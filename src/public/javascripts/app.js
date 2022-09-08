@@ -1,8 +1,8 @@
-import MainService from "./mainService.js";
-import "../stylesheets/style.scss";
+import MainService from './mainService.js';
+import '../stylesheets/style.scss';
 
-window.addEventListener("DOMContentLoaded", () => {
-  const targetEl = document.querySelector("#log");
+window.addEventListener('DOMContentLoaded', () => {
+  const targetEl = document.querySelector('#root');
 
   const service = new MainService({ targetEl });
   const datalist = [1, 2, 3, 4, [5, 6, [7]]];
