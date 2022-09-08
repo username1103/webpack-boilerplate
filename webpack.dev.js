@@ -6,5 +6,6 @@ module.exports = merge(webpackCommon, {
   devtool: 'source-map',
   devServer: {
     static: './dist',
+    hot: true,
   },
 });
