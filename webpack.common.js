@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/public/javascripts/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
   },
   module: {
     rules: [
@@ -21,10 +21,10 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.scss$/,
+        test: /\.s[ca]ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'public', 'app.html'), inject: false })],
+  plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'public', 'app.html') })],
 };
